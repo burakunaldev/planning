@@ -27,12 +27,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const dropdownLink = dropdown.querySelector('.nav-link');
 
         // För mobil: klick för att öppna/stänga dropdown
-        if (window.innerWidth <= 768) {
-            dropdownLink.addEventListener('click', function(e) {
+        dropdownLink.setAttribute('aria-haspopup', 'true');
+        dropdownLink.setAttribute('aria-expanded', 'false');
+        dropdownLink.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
                 e.preventDefault();
-                dropdown.classList.toggle('active');
-            });
-        }
+                const isOpen = dropdown.classList.toggle('active');
+                this.setAttribute('aria-expanded', isOpen);
+            }
+        });
     });
 
     // Stäng mobilmeny när man klickar på en länk
@@ -42,11 +45,17 @@ document.addEventListener('DOMContentLoaded', function() {
             if (window.innerWidth <= 768 && !this.parentElement.classList.contains('dropdown')) {
                 mainNav.classList.remove('active');
                 if (mobileMenuToggle) {
+                    mobileMenuToggle.setAttribute('aria-expanded', 'false');
                     const icon = mobileMenuToggle.querySelector('span');
                     if (icon) icon.textContent = '☰';
                 }
             }
         });
+    });
+
+    // Håll årtalet i sidfoten aktuellt
+    document.querySelectorAll('.current-year').forEach(el => {
+        el.textContent = new Date().getFullYear();
     });
 
     // Markera aktiv sida i navigationen

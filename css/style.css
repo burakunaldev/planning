@@ -161,8 +161,24 @@ body {
     z-index: 1001;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+/* Desktop: öppna med mus eller tangentbord (Tab) */
+@media (min-width: 769px) {
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+        display: block;
+    }
+}
+
+/* "Översikt"-länken behövs bara i mobilmenyn */
+.dropdown-content .nav-overview {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .dropdown-content .nav-overview {
+        display: block;
+        font-weight: 500;
+    }
 }
 
 .dropdown-content .nav-link {
