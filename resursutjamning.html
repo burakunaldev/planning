@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,8 @@
     <meta name="keywords" content="resursutjämning, resurser, projektplanering, resursoptimering">
 
 
+    <link rel="icon" type="image/jpeg" href="images/logo-icon.jpg">
+    <link rel="apple-touch-icon" href="images/logo-icon.jpg">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -25,41 +28,62 @@
             gap: 2rem;
             margin-bottom: 2rem;
         }
+
         .flex-container .text-content {
             flex: 1;
         }
+
         .flex-container .image-content {
             flex: 0 0 300px;
         }
+
         .flex-container.large-image .image-content {
             flex: 0 0 350px;
         }
+
         .flex-container img {
             width: 100%;
             height: auto;
             border-radius: 8px;
         }
+
         @media (max-width: 768px) {
             .flex-container {
-                flex-direction: column;
+                flex-direction: row;
+                flex-wrap: wrap;
             }
+
+            .flex-container .text-content {
+                flex: 1;
+                min-width: 50%;
+            }
+
             .flex-container .image-content,
             .flex-container.large-image .image-content {
-                flex: 1 1 auto;
-                width: 100%;
-                max-width: 100%;
+                flex: 0 0 40%;
+                width: 40%;
+                max-width: 40%;
+            }
+
+            .extra-spacing {
+                margin-top: 1.5rem !important;
             }
         }
     </style>
 </head>
+
 <body>
-        <!-- Skip to main content for accessibility -->
+    <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-to-content">Hoppa till huvudinnehåll</a>
 
-<header class="site-header">
+    <header class="site-header">
         <div class="header-content">
-            <a href="index.html" class="site-title">Planering med Burak Ünal</a>
-            <button class="mobile-menu-toggle" aria-label="Öppna/stäng meny" aria-expanded="false"><span>☰</span></button>
+            <a href="index.html" class="site-title">
+                <img src="images/logo-icon.jpg" alt="Logo" class="site-logo">
+                Planering med Burak Ünal
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Öppna/stäng meny"
+                aria-expanded="false"><span>☰</span></button>
             <nav class="main-nav" role="navigation" aria-label="Huvudnavigation">
                 <div class="nav-item"><a href="index.html" class="nav-link">Hem</a></div>
                 <div class="nav-item dropdown">
@@ -97,30 +121,34 @@
         <h1 class="page-title resurser-title">Resursutjämning</h1>
 
         <section class="content-section">
-            <div class="flex-container">
+            <div class="flex-container first-section">
                 <div class="text-content">
-                    <p><strong>Resurskurvor</strong> möjliggör en rättare fördelning av resurser (kostnader, timmar, material) över aktiviteter i tidplaner. Dessa blir avgörande framförallt i tidplaner med långa aktiviteter.</p>
-
-                    <p class="extra-spacing">Övergripande tidplan med resurskurvor kan användas för ekonomiska prognoser</p>
-                    <p>(Genom att sätta total kalkyl kostnader på aktiviteter (med kostnadskurvor))</p>
-                    <ul>
-                        <li>En långsiktig prognos för projektet</li>
-                        <li>Visar behov av medel under långa perioder</li>
-                        <li>En sammanfattningsbild över projektfaser</li>
-                    </ul>
+                    <p><strong>Resurskurvor</strong> möjliggör en rättare fördelning av resurser (kostnader, timmar,
+                        material) över aktiviteter i tidplaner. Dessa blir avgörande framförallt i tidplaner med långa
+                        aktiviteter.</p>
                 </div>
                 <div class="image-content">
                     <img src="images/resursutjamning 1.avif" alt="Resurskurva diagram">
                 </div>
             </div>
 
+            <p class="extra-spacing">Övergripande tidplan med resurskurvor kan användas för ekonomiska prognoser</p>
+            <p>(Genom att sätta total kalkyl kostnader på aktiviteter (med kostnadskurvor))</p>
+            <ul>
+                <li>En långsiktig prognos för projektet</li>
+                <li>Visar behov av medel under långa perioder</li>
+                <li>En sammanfattningsbild över projektfaser</li>
+            </ul>
+
+            <h2>Varför Resursutjämnande?</h2>
             <div class="flex-container large-image">
                 <div class="text-content">
-                    <h2>Varför Resursutjämnande?</h2>
-                    <p>Tidplaner har resurser/material sitter på olika aktiviteter. Inte alla aktiviteter sekventiella i tidplan så att det blir krockar.</p>
+                    <p>Tidplaner har resurser/material sitter på olika aktiviteter. Inte alla aktiviteter sekventiella i
+                        tidplan så att det blir krockar.</p>
                     <ul>
                         <li>Överbelastade resurser</li>
-                        <li>Resursers användning fluktuerar mycket under genomförandet (bättre ha jämnare användning av resurser)</li>
+                        <li>Resursers användning fluktuerar mycket under genomförandet (bättre ha jämnare användning av
+                            resurser)</li>
                         <li>Begränsad resurs tillgänglighet</li>
                     </ul>
 
@@ -137,7 +165,8 @@
             </div>
 
             <div class="highlight-box">
-                <p>Viktigt att tidplanen analyseras efter resursutjämnande åtgärder. Kritiska linjen kan vara påverkad av dessa.</p>
+                <p>Viktigt att tidplanen analyseras efter resursutjämnande åtgärder. Kritiska linjen kan vara påverkad
+                    av dessa.</p>
             </div>
 
             <h2>Prioriteringsorder för resursutjämnande:</h2>
@@ -145,9 +174,11 @@
                 <li>Aktiviteter som kräver speciell kompetens/person/material</li>
                 <li>Aktiviteter med minst total float</li>
                 <li>I fall total float är lika, aktiviteter som kräver flest antal resurser</li>
-                <li>I fall aktiviteter lika viktiga och kräver samma resurser, prioritera aktivitet som redan startat</li>
+                <li>I fall aktiviteter lika viktiga och kräver samma resurser, prioritera aktivitet som redan startat
+                </li>
                 <li>Eller Resurstillägg, split aktivitet, justera resurskurva</li>
-                <li>I fall olika projekt i organisationen använder samma resurser då vägs in prioriteringar på den nivån.</li>
+                <li>I fall olika projekt i organisationen använder samma resurser då vägs in prioriteringar på den
+                    nivån.</li>
             </ul>
 
             <p>Det kan vara projekt budget och projekt sluttider som är avgörande i resursanvändning i vissa fall.</p>
@@ -164,9 +195,10 @@
             <p>&copy; 2024 Planering med Burak Ünal</p>
         </div>
     </footer>
-    
+
     <!-- Back to top button -->
     <button class="back-to-top" aria-label="Tillbaka till toppen">↑</button>
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

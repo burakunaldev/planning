@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://burakunal.se/sitemap.xml
+Sitemap: https://planlinjen.web.app/sitemap.xml

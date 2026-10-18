@@ -84,8 +84,19 @@ body {
     color: var(--text-black);
     text-decoration: none;
     transition: opacity 0.3s ease;
-    border-left: 3px solid var(--text-black);
-    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.site-logo {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 6px;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: inline-block;
 }
 
 .site-title:hover {
@@ -238,7 +249,7 @@ body {
 /* Minska avståndet för första H2/H3 direkt efter page-title */
 .content-section[style*="margin-top: 0.5rem"] h2:first-of-type,
 .content-section[style*="margin-top: 0.5rem"] .wbs-text h2:first-of-type,
-.content-section[style*="margin-top: 0.5rem"] > h2:first-child,
+.content-section[style*="margin-top: 0.5rem"]>h2:first-child,
 .wbs-section[style*="margin-top: 0.5rem"] .wbs-text h2:first-child {
     margin-top: 0;
 }
@@ -247,7 +258,7 @@ body {
     margin-top: 0;
 }
 
-.content-section p + p {
+.content-section p+p {
     margin-top: 0.5rem;
 }
 
@@ -458,7 +469,9 @@ img {
     }
 
     /* Improve text readability on mobile */
-    p, ul, ol {
+    p,
+    ul,
+    ol {
         font-size: 1rem;
         line-height: 1.8;
     }
@@ -520,6 +533,7 @@ img {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -852,6 +866,14 @@ div[style*="display: grid"] {
     display: none;
 }
 
+.basplan-image-mobile {
+    display: none;
+}
+
+.resurssattning-image-mobile {
+    display: none;
+}
+
 .wbs-image-desktop {
     display: block;
 }
@@ -991,7 +1013,7 @@ div[style*="display: grid"] {
     }
 
     .wbs-image-mobile img {
-        width: 100%;
+        width: 50%;
         height: auto;
         margin: 0 auto;
     }
@@ -1032,8 +1054,7 @@ div[style*="display: grid"] {
     }
 
     .wbs-section-3 .wbs-image {
-        order: 1;
-        margin-bottom: 0 !important;
+        display: none;
     }
 
     .wbs-section-2 .wbs-text,
@@ -1048,7 +1069,13 @@ div[style*="display: grid"] {
 
     .wbs-section-4 .wbs-image-before-natplan {
         order: 1;
-        margin-bottom: 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        width: 70%;
+    }
+
+    .wbs-section-4 .wbs-image-before-natplan img {
+        width: 100%;
     }
 
     .wbs-section-4 .wbs-text {
@@ -1144,16 +1171,24 @@ div[style*="display: grid"] {
     /* Reversed wrapper på mobil */
     .wbs-content-wrapper-reversed {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
         margin-bottom: 0.5rem;
     }
 
+    .wbs-content-wrapper-reversed .wbs-text {
+        order: 1;
+    }
+
+    .wbs-content-wrapper-reversed .overlapping-images-container-small {
+        order: 2;
+    }
+
     /* Minska avstånd mellan bild 9 och Antaganden-texten på mobil */
-    .wbs-section-6-7-combined > .wbs-text {
+    .wbs-section-6-7-combined>.wbs-text {
         margin-top: 0 !important;
     }
 
-    .wbs-section-6-7-combined > .wbs-text h2 {
+    .wbs-section-6-7-combined>.wbs-text h2 {
         margin-top: 0.5rem !important;
     }
 
@@ -1171,6 +1206,104 @@ div[style*="display: grid"] {
     .btn-back {
         margin-top: 0;
     }
+
+    /* Nätverk-sidan: Bildstorlekar på mobil */
+    img[src*="natverk-1"] {
+        max-width: 20% !important;
+        float: right !important;
+        margin: 0 0 10px 10px !important;
+    }
+
+    img[src*="natverk-2"] {
+        max-width: 25% !important;
+        float: right !important;
+        margin: 0 0 10px 10px !important;
+    }
+
+    /* Risk-sidan: Bildstorlek på mobil */
+    img[src*="risk 1"] {
+        max-width: 50% !important;
+    }
+
+    /* Basplan-sidan: Bildstorlekar på mobil */
+    img[src*="basplan 1"] {
+        max-width: 50% !important;
+        float: right !important;
+        margin: 0 0 10px 10px !important;
+    }
+
+    /* Dölja ENDAST desktop-versionen av basplan 3, inte mobil-versionen */
+    img[src*="basplan 3"]:not(.basplan-image-mobile img) {
+        display: none !important;
+    }
+
+    .basplan-image-mobile {
+        display: block !important;
+    }
+
+    .basplan-image-mobile img {
+        display: block !important;
+        max-width: 60% !important;
+    }
+
+    /* Resurssättning-sidan: Bilden bredvid highlight-boxen på mobil */
+    .resurssattning-image-desktop {
+        display: none !important;
+    }
+
+    .resurssattning-image-mobile {
+        display: block !important;
+    }
+
+    .resurssattning-highlight-wrapper {
+        display: flex !important;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    /* Avstamning-sidan: Första bilden mindre och bredvid text */
+    img[src*="Avstamning 1"] {
+        max-width: 35% !important;
+        float: right !important;
+        margin: 0 0 10px 10px !important;
+    }
+
+    /* Avstamning-sidan: Sista bilden mindre och bredvid text */
+    img[src*="Avstamning 4"] {
+        max-width: 30% !important;
+        float: right !important;
+        margin: 0 0 10px 10px !important;
+    }
+
+    /* Avvikelsehantering-sidan: Sista bilden mindre */
+    img[src*="avvikelsehantering 2"] {
+        max-width: 30% !important;
+        float: right !important;
+        margin: 0 0 10px 10px !important;
+    }
+
+    /* Section 8 på aktiviteter-sidan: Bild närmare rubriken under */
+    .wbs-section-8 .wbs-text>.wbs-content-wrapper {
+        flex-direction: column;
+        justify-content: flex-start !important;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        height: auto !important;
+    }
+
+    .wbs-section-8 .wbs-text>.wbs-content-wrapper .wbs-image.smaller {
+        margin: 1rem auto 0 !important;
+        flex-basis: auto !important;
+        height: auto !important;
+    }
+
+    .wbs-section-8 .wbs-text>.wbs-content-wrapper .wbs-image.smaller img {
+        margin-bottom: 0 !important;
+    }
+
+    .wbs-section-8 .wbs-text>h3 {
+        margin-top: 0.5rem !important;
+    }
 }
 
 /* ============================================
@@ -1178,6 +1311,7 @@ div[style*="display: grid"] {
    ============================================ */
 
 @media print {
+
     .site-header,
     .site-footer,
     .mobile-menu-toggle,

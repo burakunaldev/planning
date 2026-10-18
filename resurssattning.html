@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,17 +17,24 @@
     <meta name="keywords" content="resurssättning, resurser, projektplanering, resursfördelning">
 
 
+    <link rel="icon" type="image/jpeg" href="images/logo-icon.jpg">
+    <link rel="apple-touch-icon" href="images/logo-icon.jpg">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-        <!-- Skip to main content for accessibility -->
+    <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-to-content">Hoppa till huvudinnehåll</a>
 
-<header class="site-header">
+    <header class="site-header">
         <div class="header-content">
-            <a href="index.html" class="site-title">Planering med Burak Ünal</a>
-            <button class="mobile-menu-toggle" aria-label="Öppna/stäng meny" aria-expanded="false"><span>☰</span></button>
+            <a href="index.html" class="site-title">
+                <img src="images/logo-icon.jpg" alt="Logo" class="site-logo">
+                Planering med Burak Ünal
+            </a>
+            <button class="mobile-menu-toggle" aria-label="Öppna/stäng meny"
+                aria-expanded="false"><span>☰</span></button>
             <nav class="main-nav" role="navigation" aria-label="Huvudnavigation">
                 <div class="nav-item"><a href="index.html" class="nav-link">Hem</a></div>
                 <div class="nav-item dropdown">
@@ -66,7 +74,8 @@
         <section class="content-section">
             <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
                 <div style="flex: 1; min-width: 300px;">
-                    <p><strong>Kartläggning</strong> av resurser startar i samband med tidig planeringsfas i projektet</p>
+                    <p><strong>Kartläggning</strong> av resurser startar i samband med tidig planeringsfas i projektet
+                    </p>
                     <ul>
                         <li>För beställaren: Fas innan upphandling</li>
                         <li>För leverantören: Anbudsskede</li>
@@ -75,16 +84,23 @@
                     <p>Identifiera/kartlägga kritiska resurser för projektet (projektets framdrift)</p>
                     <p>Fokusera på kritiska linjen och övergripande aktiviteter</p>
 
-                    <div class="highlight-box">
-                        <p><strong>Projekt kan vara:</strong></p>
-                        <ul>
-                            <li>Resursbegränsad</li>
-                            <li>Tidsbegränsad</li>
-                        </ul>
+                    <div class="resurssattning-highlight-wrapper">
+                        <div class="highlight-box">
+                            <p><strong>Projekt kan vara:</strong></p>
+                            <ul>
+                                <li>Resursbegränsad</li>
+                                <li>Tidsbegränsad</li>
+                            </ul>
+                        </div>
+                        <div class="resurssattning-image-mobile">
+                            <img src="images/resurssattning 1.avif" alt="Kartläggning av resurser i projektet"
+                                style="width: 100%; max-width: 120px; height: auto; border-radius: 8px;">
+                        </div>
                     </div>
                 </div>
-                <div style="flex: 0 0 auto;">
-                    <img src="images/resurssattning 1.avif" alt="Kartläggning av resurser i projektet" style="width: 200px; height: auto; border-radius: 8px;">
+                <div style="flex: 0 0 auto;" class="resurssattning-image-desktop">
+                    <img src="images/resurssattning 1.avif" alt="Kartläggning av resurser i projektet"
+                        style="width: 200px; height: auto; border-radius: 8px;">
                 </div>
             </div>
         </section>
@@ -94,7 +110,8 @@
             <p>Skapa en resurslista (Arbetskraft, material, utrustning)</p>
             <p>Definiera behov av resurs per aktivitet (timmar eller mängd) – ta hjälp av ATR blad</p>
 
-            <img src="images/resurssattning 2.avif" alt="Resursgraf och histogram" style="width: 100%; max-width: 600px; height: auto; margin-top: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <img src="images/resurssattning 2.avif" alt="Resursgraf och histogram"
+                style="width: 100%; max-width: 600px; height: auto; margin-top: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
         </section>
 
         <section class="content-section">
@@ -102,7 +119,8 @@
             <ul>
                 <li>Genom att sätta antal timmar per period (dag, vecka, månad)</li>
                 <li>Genom att sätta total antal timmar på aktivitet och fördela enligt fördefinierad kurva</li>
-                <li>Genom att sätta procentuellt arbetsbelastning (verktyget beräknar antal timmar per period/aktivitet)</li>
+                <li>Genom att sätta procentuellt arbetsbelastning (verktyget beräknar antal timmar per period/aktivitet)
+                </li>
             </ul>
 
             <p>Sätt kalender på resurser i fall resurser kräver speciella tider</p>
@@ -110,7 +128,8 @@
 
         <section class="content-section">
             <div class="highlight-box">
-                <p><strong>Tips för beställare:</strong> Ställ krav på max antal timmar en aktivitet kan bära i tidplan. Detta får leverantören att bryta ner grova aktiviteter i tidplan</p>
+                <p><strong>Tips för beställare:</strong> Ställ krav på max antal timmar en aktivitet kan bära i tidplan.
+                    Detta får leverantören att bryta ner grova aktiviteter i tidplan</p>
             </div>
         </section>
 
@@ -127,9 +146,10 @@
             <p>&copy; 2024 Planering med Burak Ünal</p>
         </div>
     </footer>
-    
+
     <!-- Back to top button -->
     <button class="back-to-top" aria-label="Tillbaka till toppen">↑</button>
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
